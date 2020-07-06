@@ -1,0 +1,35 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void){
+    int i;
+    int height;
+    int baseplate = 0;
+    height = get_int("Whats the height of mario´s building?\n");
+    int s = height - 1;
+    int b = height - s;
+while (baseplate < height)
+{
+for (i = 0; i < s; ++i)
+        {
+        printf(" ");
+        }
+for (i = 0; i < b; ++i)
+        {
+        printf("#");
+        }
+printf("  ");
+for (i = 0; i < b; ++i)
+        {
+        printf("#");
+        }
+for (i = 0; i < s; ++i)
+        {
+        printf(" ");
+        }
+printf("\n");
+baseplate = baseplate + 1;
+s = s - 1;
+b = b + 1;
+}
+}
